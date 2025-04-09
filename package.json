@@ -1,13 +1,58 @@
 {
   "name": "eslint-plugins",
   "private": true,
-  "version": "1.0.0",
-  "workspaces": ["packages/*"],
+  "version": "1.1.0",
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
-    "lerna": "^8.2.1"
+    "lerna": "^8.2.1",
+    "standard-version": "^9.5.0"
   },
   "scripts": {
     "bootstrap": "lerna link",
-    "publish": "lerna publish"
+    "version": "standard-version",
+    "changelog": "standard-version --dry-run --skip.tag=true --skip.commit=true",
+    "publish": "lerna publish from-package --yes"
+  },
+  "standard-version": {
+    "skip": {
+      "tag": false
+    },
+    "types": [
+      {
+        "type": "feat",
+        "section": "✨ Features"
+      },
+      {
+        "type": "fix",
+        "section": "🐞 Bug Fixes"
+      },
+      {
+        "type": "chore",
+        "section": "🧹 Chores",
+        "hidden": true
+      },
+      {
+        "type": "docs",
+        "section": "📝 Documentation",
+        "hidden": true
+      },
+      {
+        "type": "style",
+        "section": "💄 Code Style",
+        "hidden": true
+      },
+      {
+        "type": "refactor",
+        "section": "🔧 Refactoring",
+        "hidden": true
+      },
+      {
+        "type": "test",
+        "section": "✅ Tests",
+        "hidden": true
+      }
+    ]
   }
 }
