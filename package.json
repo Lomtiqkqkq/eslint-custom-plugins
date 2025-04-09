@@ -1,6 +1,7 @@
 {
   "name": "eslint-plugins",
   "version": "1.4.0",
+  "private": true,
   "workspaces": [
     "packages/*"
   ],
@@ -14,9 +15,6 @@
     "changelog": "standard-version --dry-run --skip.tag=true --skip.commit=true",
     "publish": "lerna publish from-package --yes",
     "release": "git add . && git commit -m \"feat: обновление плагинов\" && npx lerna version && git push --follow-tags && npx lerna publish from-package --yes\n"
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "standard-version": {
     "skip": {
