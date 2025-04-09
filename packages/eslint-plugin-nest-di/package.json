@@ -1,0 +1,14 @@
+{
+  "name": "eslint-plugin-nest-di",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js"
+    }
+  },
+  "peerDependencies": {
+    "eslint": ">=7.0.0"
+  }
+}
