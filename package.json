@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugins",
-  "version": "1.10.0",
+  "version": "1.11.0",
   "private": true,
   "workspaces": [
     "packages/*"
@@ -15,7 +15,8 @@
     "version": "standard-version",
     "changelog": "standard-version --dry-run --skip.tag=true --skip.commit=true",
     "publish": "lerna publish from-git --yes",
-    "release": "npx lerna version --conventional-commits --yes --message \"chore(release): publish %s\" && git push --follow-tags origin master && npx lerna publish from-git --yes"  },
+    "release": "npx lerna version --conventional-commits --yes --message \"chore(release): publish %s\" && git push --follow-tags origin master && npx lerna publish from-git --yes"
+  },
   "standard-version": {
     "skip": {
       "tag": false

@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.0](https://github.com/Lomtiqkqkq/eslint-custom-plugins/compare/v1.10.0...v1.11.0) (2025-04-09)
+
+
+### ✨ Features
+
+* enable conventional commits for versioning and update dependencies ([4ecce98](https://github.com/Lomtiqkqkq/eslint-custom-plugins/commit/4ecce98b61cb90fd27c8c43c99a0617d045ae96c))
+* refactor index.js to use CommonJS module syntax and enhance no-type-import-di rule configuration ([4ae4c19](https://github.com/Lomtiqkqkq/eslint-custom-plugins/commit/4ae4c197fbf7e98e076e83ee20f45d236d569197))
+
+
+### 🐞 Bug Fixes
+
+* update publish command in package.json to use from-git ([e8f5bb4](https://github.com/Lomtiqkqkq/eslint-custom-plugins/commit/e8f5bb4fbf5c25acd8528e77a7726fd7d31faa7d))
+* update publish command in package.json to use from-package ([8257a86](https://github.com/Lomtiqkqkq/eslint-custom-plugins/commit/8257a862f8343225493b71675b2a48b1d60ed52e))
+* update release command in package.json to use from-git for publishing ([7a9bf1d](https://github.com/Lomtiqkqkq/eslint-custom-plugins/commit/7a9bf1d5d462642f298688356c2e827710f5a12a))
+
 ## [1.10.0](https://github.com/Lomtiqkqkq/eslint-custom-plugins/compare/v1.9.0...v1.10.0) (2025-04-09)
 
 
