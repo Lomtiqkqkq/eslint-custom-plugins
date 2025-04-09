@@ -1,9 +1,8 @@
 {
   "name": "@lomtiqk/eslint-plugin-nest-di",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "main": "lib/index.js",
   "type": "module",
-
   "publishConfig": {
     "access": "public"
   },
