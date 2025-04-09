@@ -9,6 +9,7 @@
     }
   },
   "dependencies": {
-    "eslint-plugin-nest-di": "^1.2.0"
-  }
+    "@lomtiqk/eslint-plugin-nest-di": "^1.2.0"
+  },
+  "gitHead": "afdde188b037adfa30e3ed8d1bf276a407ef0a57"
 }
