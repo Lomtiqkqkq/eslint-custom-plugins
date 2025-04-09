@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/Lomtiqkqkq/eslint-custom-plugins/compare/eslint-plugin-nest-di@1.5.5...eslint-plugin-nest-di@1.6.0) (2025-04-09)
+
+
+### Features
+
+* refactor index.js to use CommonJS module syntax and enhance no-type-import-di rule configuration ([4ae4c19](https://github.com/Lomtiqkqkq/eslint-custom-plugins/commit/4ae4c197fbf7e98e076e83ee20f45d236d569197))
+
+
+
+
+
 # [1.5.0](https://github.com/Lomtiqkqkq/eslint-custom-plugins/compare/@lomtiqk/eslint-plugin-nest-di@1.4.0...@lomtiqk/eslint-plugin-nest-di@1.5.0) (2025-04-09)
 
 
