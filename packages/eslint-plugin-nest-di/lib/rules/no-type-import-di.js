@@ -1,17 +1,15 @@
-const { ESLintUtils } = require('@typescript-eslint/utils');
-
 module.exports = {
     meta: {
         type: 'problem',
         docs: {
             description: "Запрещает использование 'import type' для классов, используемых в DI",
-            recommended: 'error',
+            recommended: true
         },
         fixable: 'code',
         schema: [],
         messages: {
-            noTypeImportForDI: "Используйте обычный импорт вместо 'import type' для классов, участвующих в DI.",
-        },
+            noTypeImportForDI: "Используйте обычный импорт вместо 'import type' для классов, участвующих в DI."
+        }
     },
 
     create(context) {
@@ -38,22 +36,21 @@ module.exports = {
                             ) {
                                 const typeName = typeAnnotation.typeAnnotation.typeName.name;
                                 if (typeImports.has(typeName)) {
+                                    const importNode = typeImports.get(typeName);
                                     context.report({
-                                        node: typeImports.get(typeName),
+                                        node: importNode,
                                         messageId: 'noTypeImportForDI',
                                         fix(fixer) {
-                                            const importToken = context.sourceCode.getFirstToken(
-                                                typeImports.get(typeName)
-                                            );
+                                            const importToken = context.sourceCode.getFirstToken(importNode);
                                             return fixer.replaceText(importToken, 'import');
-                                        },
+                                        }
                                     });
                                 }
                             }
                         }
                     });
                 }
-            },
+            }
         };
-    },
+    }
 };

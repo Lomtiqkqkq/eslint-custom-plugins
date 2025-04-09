@@ -15,7 +15,7 @@
     "version": "standard-version",
     "changelog": "standard-version --dry-run --skip.tag=true --skip.commit=true",
     "publish": "lerna publish from-package --yes",
-    "release": "git add . && npx lerna version patch --conventional-commits --yes --message \"chore(release): publish\"  && git push --follow-tags origin master && npx lerna publish from-git --yes"
+    "release": "git add . && npx lerna version patch --conventional-commits --yes --message \"chore(release): publish\"  && git push --follow-tags origin master && npx lerna publish from-package --yes"
   },
   "standard-version": {
     "skip": {
