@@ -14,7 +14,7 @@
     "version": "standard-version",
     "changelog": "standard-version --dry-run --skip.tag=true --skip.commit=true",
     "publish": "lerna publish from-package --yes",
-    "release": "git add . && npx lerna version && git commit -m \"feat: обновление плагинов\" &&  git push --follow-tags origin master && npx lerna publish from-package --yes\n"
+    "release": "git add . && git commit -m \"feat: обновление плагинов\" && npx lerna version &&  git push --follow-tags origin master && npx lerna publish from-package --yes\n"
   },
   "standard-version": {
     "skip": {

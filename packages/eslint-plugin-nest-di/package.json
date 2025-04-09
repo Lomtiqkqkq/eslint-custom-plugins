@@ -15,5 +15,8 @@
   "peerDependencies": {
     "eslint": ">=7.0.0"
   },
-  "gitHead": "a28a39e415fd2dcf8b0f6afa442eb6c97df82f27"
+  "gitHead": "a28a39e415fd2dcf8b0f6afa442eb6c97df82f27",
+  "dependencies": {
+    "@typescript-eslint/utils": "^8.29.1"
+  }
 }

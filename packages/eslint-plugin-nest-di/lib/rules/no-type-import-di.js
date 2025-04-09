@@ -1,56 +1,59 @@
-export default {
+const { ESLintUtils } = require('@typescript-eslint/utils');
+
+module.exports = {
     meta: {
-        type: "problem",
+        type: 'problem',
         docs: {
-            description: "Ignore @typescript-eslint/consistent-type-imports for NestJS DI",
-            recommended: false
+            description: "Запрещает использование 'import type' для классов, используемых в DI",
+            recommended: 'error',
         },
+        fixable: 'code',
         schema: [],
         messages: {
-            typeOnlyImportUsedInConstructor: "Type-only import is used in constructor for DI, consider removing the 'type' keyword."
+            noTypeImportForDI: "Используйте обычный импорт вместо 'import type' для классов, участвующих в DI.",
         },
-        fixable: "code"
     },
 
     create(context) {
-        const typeImports = new Map(); // { ImportedName => node }
+        const typeImports = new Map();
 
         return {
             ImportDeclaration(node) {
-                if (node.importKind === "type") {
-                    for (const spec of node.specifiers) {
-                        if (spec.type === "ImportSpecifier") {
-                            typeImports.set(spec.local.name, node);
-                        }
-                    }
+                if (node.importKind === 'type') {
+                    node.specifiers.forEach((specifier) => {
+                        const importedName = specifier.local.name;
+                        typeImports.set(importedName, node);
+                    });
                 }
             },
 
             MethodDefinition(node) {
-                if (
-                    node.kind === "constructor" &&
-                    node.value?.params?.length &&
-                    node.value.params.every((param) => param.type === "TSParameterProperty")
-                ) {
-                    for (const param of node.value.params) {
-                        const identifier = param.parameter.name;
-                        if (typeImports.has(identifier)) {
-                            const importNode = typeImports.get(identifier);
-                            context.report({
-                                node: importNode,
-                                messageId: "typeOnlyImportUsedInConstructor",
-                                fix(fixer) {
-                                    // remove the 'type' keyword from import
-                                    const importStart = importNode.range[0];
-                                    const importText = context.getSourceCode().getText(importNode);
-                                    const fixedText = importText.replace(/^import\s+type/, "import");
-                                    return fixer.replaceTextRange([importStart, importStart + importText.length], fixedText);
+                if (node.kind === 'constructor') {
+                    node.value.params.forEach((param) => {
+                        if (param.type === 'TSParameterProperty') {
+                            const typeAnnotation = param.parameter.typeAnnotation;
+                            if (
+                                typeAnnotation &&
+                                typeAnnotation.typeAnnotation.type === 'TSTypeReference'
+                            ) {
+                                const typeName = typeAnnotation.typeAnnotation.typeName.name;
+                                if (typeImports.has(typeName)) {
+                                    context.report({
+                                        node: typeImports.get(typeName),
+                                        messageId: 'noTypeImportForDI',
+                                        fix(fixer) {
+                                            const importToken = context.sourceCode.getFirstToken(
+                                                typeImports.get(typeName)
+                                            );
+                                            return fixer.replaceText(importToken, 'import');
+                                        },
+                                    });
                                 }
-                            });
+                            }
                         }
-                    }
+                    });
                 }
-            }
+            },
         };
-    }
+    },
 };
