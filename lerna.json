@@ -4,6 +4,9 @@
     "packages/*"
   ],
   "command": {
+    "version": {
+      "conventionalCommits": true
+    },
     "publish": {
       "ignoreChanges": ["*.md"],
       "message": "chore(release): publish",

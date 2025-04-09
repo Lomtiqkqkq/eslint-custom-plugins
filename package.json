@@ -6,6 +6,7 @@
     "packages/*"
   ],
   "devDependencies": {
+    "conventional-changelog-conventionalcommits": "^8.0.0",
     "lerna": "^8.2.1",
     "standard-version": "^9.5.0"
   },
@@ -13,8 +14,8 @@
     "bootstrap": "lerna link",
     "version": "standard-version",
     "changelog": "standard-version --dry-run --skip.tag=true --skip.commit=true",
-    "publish": "lerna publish from-package --yes",
-    "release": "git add . && git commit -m \"feat: обновление плагинов\" && npx lerna version &&  git push --follow-tags origin master && npx lerna publish from-package --yes\n"
+    "publish": "lerna publish from-git --yes",
+    "release": "git add . && npx lerna version patch --conventional-commits --yes --message \"chore(release): publish\"  && git push --follow-tags origin master && npx lerna publish from-git --yes"
   },
   "standard-version": {
     "skip": {
