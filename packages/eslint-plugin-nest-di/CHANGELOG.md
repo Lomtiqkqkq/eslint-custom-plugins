@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/Lomtiqkqkq/eslint-custom-plugins/compare/eslint-plugin-nest-di@1.1.0...eslint-plugin-nest-di@1.2.0) (2025-04-09)
+
+
+### Features
+
+* обновление плагинов ([40d2d62](https://github.com/Lomtiqkqkq/eslint-custom-plugins/commit/40d2d623edf07fd49b38acaab14705b58c829c40))
+* add ESLint plugin for NestJS dependency injection rules ([9889cc0](https://github.com/Lomtiqkqkq/eslint-custom-plugins/commit/9889cc053d4a76af83a0d547bd20cc01408026bd))
+
+
+
+
+
 # 1.1.0 (2025-04-09)
 
 
