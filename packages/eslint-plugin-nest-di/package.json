@@ -2,13 +2,15 @@
   "name": "@lomtiqk/eslint-plugin-nest-di",
   "version": "1.5.1",
   "main": "lib/index.js",
-  "type": "commonjs",
+  "type": "module",
+
   "publishConfig": {
     "access": "public"
   },
   "exports": {
     ".": {
-      "import": "./lib/index.js"
+      "import": "./lib/index.js",
+      "require": "./lib/index.js"
     }
   },
   "peerDependencies": {
