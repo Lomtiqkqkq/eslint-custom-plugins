@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-all-rules",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "lib/index.js",
   "type": "module",
   "exports": {
@@ -9,6 +9,6 @@
     }
   },
   "dependencies": {
-    "eslint-plugin-nest-di": "^1.0.0"
+    "eslint-plugin-nest-di": "^1.1.0"
   }
 }
