@@ -1,5 +1,5 @@
 {
-  "name": "@lomtiqk/eslint-plugin-nest-di",
+  "name": "eslint-plugin-nest-di",
   "version": "1.5.2",
   "main": "lib/index.js",
   "type": "module",
@@ -15,5 +15,5 @@
   "peerDependencies": {
     "eslint": ">=7.0.0"
   },
-  "gitHead": "ddb2a79ff7aa9e9d62e686b0fc7f01c44c51f2db"
+  "gitHead": "0ffd0bab69a3f8a461afb8647d762f3cf4a870ce"
 }

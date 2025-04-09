@@ -14,5 +14,5 @@
   "dependencies": {
     "@lomtiqk/eslint-plugin-nest-di": "^1.5.2"
   },
-  "gitHead": "ddb2a79ff7aa9e9d62e686b0fc7f01c44c51f2db"
+  "gitHead": "0ffd0bab69a3f8a461afb8647d762f3cf4a870ce"
 }
