@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.10.0](https://github.com/Lomtiqkqkq/eslint-custom-plugins/compare/v1.9.0...v1.10.0) (2025-04-09)
+
+
+### ✨ Features
+
+* обновление плагинов ([f2eaf2e](https://github.com/Lomtiqkqkq/eslint-custom-plugins/commit/f2eaf2e9fec5e7030ed0e8ca5c0ee1ab3bc099eb))
+* обновление плагинов ([add0c8b](https://github.com/Lomtiqkqkq/eslint-custom-plugins/commit/add0c8b3fca8c25d0e330b77c58d95a79db56297))
+
 ## [1.9.0](https://github.com/Lomtiqkqkq/eslint-custom-plugins/compare/v1.8.0...v1.9.0) (2025-04-09)
 
 
