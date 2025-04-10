@@ -2,7 +2,7 @@
   "name": "eslint-plugin-nest-di",
   "version": "1.6.0",
   "main": "lib/index.js",
-  "type": "module",
+  "type": "commonjs",
   "publishConfig": {
     "access": "public"
   },
@@ -15,7 +15,7 @@
   "peerDependencies": {
     "eslint": ">=7.0.0"
   },
-  "gitHead": "a28a39e415fd2dcf8b0f6afa442eb6c97df82f27",
+  "gitHead": "71a9f8ec32c2504cfce04ebf0c0aab2c1463d0aa",
   "dependencies": {
     "@typescript-eslint/utils": "^8.29.1"
   }

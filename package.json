@@ -14,7 +14,7 @@
     "bootstrap": "lerna link",
     "version": "standard-version",
     "changelog": "standard-version --dry-run --skip.tag=true --skip.commit=true",
-    "publish": "lerna publish from-git --yes",
+    "publish": "lerna publish from-package --yes",
     "release": "npx lerna version --conventional-commits --yes --message \"chore(release): publish %s\" && git push --follow-tags origin master && npx lerna publish from-git --yes"
   },
   "standard-version": {
